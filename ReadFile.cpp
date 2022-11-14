@@ -17,9 +17,10 @@ void ReadFile::ReadInput() {
 
     string inputString;
 
-    struct apartmentNode *headNode;
-    headNode = (struct apartmentNode*) malloc(sizeof(struct apartmentNode));
+    apartmentNode *headNode =  new apartmentNode();
 
+    //headNode = (apartmentNode*) malloc(sizeof(apartmentNode));
+    //headNode->id = "sasd";
     Commands commands;
 
     while (getline(inputFile,inputString)){
@@ -41,11 +42,10 @@ void ReadFile::ReadInput() {
         if(inputsArray[0] == "add_apartment"){
             int max_bandwith = stoi(inputsArray[3]);
 
-            commands.add_apartment(apartmentNumber,headNode,inputsArray[1],inputsArray[2],max_bandwith);
+            commands.add_apartment(headNode,inputsArray[1],inputsArray[2],max_bandwith);
             apartmentNumber++;
         }else if(inputsArray[0] == "add_flat"){
-
-            commands.add_flat();
+            commands.add_flat(headNode,inputsArray[1], stoi(inputsArray[2]), stoi(inputsArray[3]),inputsArray[4]);
         }else if(inputsArray[0] == "remove_apartment"){
 
             commands.remove_apartment();
@@ -63,10 +63,9 @@ void ReadFile::ReadInput() {
             commands.relocate_flats_to_same_apartment();
         }else if(inputsArray[0] == "list_apartments"){
 
-            commands.list_apartments();
+            commands.list_apartments(headNode);
         }
     }
-
-    cout << headNode->max_bandwith << endl;
+    //cout << headNode->next->id << endl;
     inputFile.close();
 }

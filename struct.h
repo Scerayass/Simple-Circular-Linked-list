@@ -14,8 +14,9 @@ struct flatNode{  // flat's doubly linked list
 struct apartmentNode{ // apartment's circular linked list
     int max_bandwith;
     string id;
-    apartmentNode* node;
+    apartmentNode* next;
     flatNode* flats;
+    int flatNumber = 0;
 
 };
 
