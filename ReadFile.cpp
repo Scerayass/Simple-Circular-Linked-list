@@ -33,10 +33,10 @@ void ReadFile::ReadInput() {
             inputsArray[arrayIndex] = streamString;
             arrayIndex++;
         }
-        for(string x : inputsArray ){
-            cout << x << " ";
-        }
-        cout << endl;
+        //for(string x : inputsArray ){
+        //    cout << x << " ";
+        //}
+        //cout << endl;
 
 
         if(inputsArray[0] == "add_apartment"){
@@ -48,19 +48,19 @@ void ReadFile::ReadInput() {
             commands.add_flat(headNode,inputsArray[1], stoi(inputsArray[2]), stoi(inputsArray[3]),inputsArray[4]);
         }else if(inputsArray[0] == "remove_apartment"){
 
-            commands.remove_apartment();
+            commands.remove_apartment(headNode,inputsArray[1]);
         }else if(inputsArray[0] == "make_flat_empty"){
 
-            commands.make_flat_empty();
+            commands.make_flat_empty(headNode,inputsArray[1],stoi(inputsArray[2]));
         }else if(inputsArray[0] == "find_sum_of_max_bandwidths"){
 
-            commands.find_sum_of_max_bandwidths();
+            commands.find_sum_of_max_bandwidths(headNode);
         }else if(inputsArray[0] == "merge_two_apartments"){
 
-            commands.merge_two_apartments();
+            commands.merge_two_apartments(headNode,inputsArray[1],inputsArray[2]);
         }else if(inputsArray[0] == "relocate_flats_to_same_apartment"){
 
-            commands.relocate_flats_to_same_apartment();
+            commands.relocate_flats_to_same_apartment(headNode,inputsArray[1], stoi(inputsArray[2]),inputsArray[3]);
         }else if(inputsArray[0] == "list_apartments"){
 
             commands.list_apartments(headNode);

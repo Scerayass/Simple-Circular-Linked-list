@@ -7,6 +7,7 @@ using namespace std;
 struct flatNode{  // flat's doubly linked list
     int id;
     int initial_bandwith;
+    int is_empty = 0;
     flatNode* prev;
     flatNode* next;
 };
@@ -17,6 +18,7 @@ struct apartmentNode{ // apartment's circular linked list
     apartmentNode* next;
     flatNode* flats;
     int flatNumber = 0;
+    int currentMaxBandwith;
 
 };
 
