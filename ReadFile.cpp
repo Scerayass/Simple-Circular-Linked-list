@@ -18,9 +18,6 @@ void ReadFile::ReadInput() {
     string inputString;
 
     apartmentNode *headNode =  new apartmentNode();
-
-    //headNode = (apartmentNode*) malloc(sizeof(apartmentNode));
-    //headNode->id = "sasd";
     Commands commands;
 
     while (getline(inputFile,inputString)){
@@ -38,34 +35,24 @@ void ReadFile::ReadInput() {
         //}
         //cout << endl;
 
-
         if(inputsArray[0] == "add_apartment"){
-            int max_bandwith = stoi(inputsArray[3]);
-
-            commands.add_apartment(headNode,inputsArray[1],inputsArray[2],max_bandwith);
+            commands.add_apartment(headNode,inputsArray[1],inputsArray[2], stoi(inputsArray[3]));
             apartmentNumber++;
         }else if(inputsArray[0] == "add_flat"){
             commands.add_flat(headNode,inputsArray[1], stoi(inputsArray[2]), stoi(inputsArray[3]),inputsArray[4]);
         }else if(inputsArray[0] == "remove_apartment"){
-
             commands.remove_apartment(headNode,inputsArray[1]);
         }else if(inputsArray[0] == "make_flat_empty"){
-
             commands.make_flat_empty(headNode,inputsArray[1],stoi(inputsArray[2]));
         }else if(inputsArray[0] == "find_sum_of_max_bandwidths"){
-
             commands.find_sum_of_max_bandwidths(headNode);
         }else if(inputsArray[0] == "merge_two_apartments"){
-
             commands.merge_two_apartments(headNode,inputsArray[1],inputsArray[2]);
         }else if(inputsArray[0] == "relocate_flats_to_same_apartment"){
-
             commands.relocate_flats_to_same_apartment(headNode,inputsArray[1], stoi(inputsArray[2]),inputsArray[3]);
         }else if(inputsArray[0] == "list_apartments"){
-
             commands.list_apartments(headNode);
         }
     }
-    //cout << headNode->next->id << endl;
     inputFile.close();
 }
