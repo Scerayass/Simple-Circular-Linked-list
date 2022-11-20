@@ -3,4 +3,4 @@ project(secondAssignment)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(secondAssignment main.cpp ReadFile.cpp ReadFile.h Commands.cpp Commands.h struct.h)
+add_executable(secondAssignment main.cpp ReadFile.cpp ReadFile.h Commands.cpp Commands.h structs.h)

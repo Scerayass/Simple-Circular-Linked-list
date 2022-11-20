@@ -1,10 +1,10 @@
 #ifndef SECONDASSIGNMENT_READFILE_H
 #define SECONDASSIGNMENT_READFILE_H
-#include "struct.h"
+#include "structs.h"
 
 class ReadFile {
 public:
-    void ReadInput();
+    void ReadInput(string inputFileName,string outputFileName);
 };
 
 

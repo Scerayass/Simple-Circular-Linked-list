@@ -67,6 +67,12 @@ build CMakeFiles/secondAssignment.dir/Commands.cpp.obj: CXX_COMPILER__secondAssi
   OBJECT_DIR = CMakeFiles\secondAssignment.dir
   OBJECT_FILE_DIR = CMakeFiles\secondAssignment.dir
 
+build CMakeFiles/secondAssignment.dir/structs.cpp.obj: CXX_COMPILER__secondAssignment_Debug C$:/Users/GameGaraj/CLionProjects/secondAssignment/structs.cpp || cmake_object_order_depends_target_secondAssignment
+  DEP_FILE = CMakeFiles\secondAssignment.dir\structs.cpp.obj.d
+  FLAGS = -g -std=gnu++11
+  OBJECT_DIR = CMakeFiles\secondAssignment.dir
+  OBJECT_FILE_DIR = CMakeFiles\secondAssignment.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target secondAssignment
@@ -75,7 +81,7 @@ build CMakeFiles/secondAssignment.dir/Commands.cpp.obj: CXX_COMPILER__secondAssi
 #############################################
 # Link the executable secondAssignment.exe
 
-build secondAssignment.exe: CXX_EXECUTABLE_LINKER__secondAssignment_Debug CMakeFiles/secondAssignment.dir/main.cpp.obj CMakeFiles/secondAssignment.dir/ReadFile.cpp.obj CMakeFiles/secondAssignment.dir/Commands.cpp.obj
+build secondAssignment.exe: CXX_EXECUTABLE_LINKER__secondAssignment_Debug CMakeFiles/secondAssignment.dir/main.cpp.obj CMakeFiles/secondAssignment.dir/ReadFile.cpp.obj CMakeFiles/secondAssignment.dir/Commands.cpp.obj CMakeFiles/secondAssignment.dir/structs.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\secondAssignment.dir

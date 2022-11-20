@@ -1,5 +1,5 @@
-#ifndef SECONDASSIGNMENT_STRUCT_H
-#define SECONDASSIGNMENT_STRUCT_H
+#ifndef SECONDASSIGNMENT_STRUCTS_H
+#define SECONDASSIGNMENT_STRUCTS_H
 #include <string>
 
 using namespace std;
@@ -22,4 +22,4 @@ struct apartmentNode{ // apartment's circular linked list
 
 };
 
-#endif //SECONDASSIGNMENT_STRUCT_H
+#endif //SECONDASSIGNMENT_STRUCTS_H
